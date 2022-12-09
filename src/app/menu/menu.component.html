@@ -1,0 +1,9 @@
+<menu>
+    <li><a [routerLink]="['']" class="button fancy-button"><i class="material-icons">explore</i></a></li>
+    <li><a [routerLink]="['/menu', uid, 'games']">Tasks</a></li>
+    <li><a [routerLink]="['/menu', uid, 'library']">Library</a></li>
+    <li><a [routerLink]="['/menu', uid, 'friends', 'list']">Friends</a></li>
+    <li><a [routerLink]="['/menu', uid, 'profile']">Profile</a></li>
+    <li><a [routerLink]="['/menu', uid, 'recommended']">Recommended</a></li>
+</menu>
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+<div class="round">
+    <div class="signIn">
+        <h3>Sign In</h3>
+        <form [formGroup]="loginForm" (submit)="submit()">
+            <p>Email</p>
+            <input type="text" placeholder="email" formControlName="email">
+            <p>Password</p>
+            <input type="password" placeholder="password" formControlName="password">
+            <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
+        </form>
+    </div>
+    <div>
+        <table>
+            <thead><th>login</th><th>password</th></thead>
+            <tr *ngFor="let user of usersList"><td>{{user.login}}</td><td>{{user.pass}}</td></tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+
+h3 {
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.block {
+  background-color: #fff;
+  margin: 45px 65px;
+  padding: 15px 45px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.288);
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #55d;
+  border: none;
+  border-radius: 5px;
+}
+button:disabled {
+  background-color: aliceblue;
+  color: #555;
+  opacity: 0.3;
+}
+.searchInput {
+  width: 80%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #9BB7D4;
+margin-bottom: 15px;
+}
+
+
+.searchButton {
+  height: 40px;
+  width: 15%;
+  margin-left: 5px;
+}
+
+.searchButton:hover {
+  background-color: #D2386C;
+}
+
+.blockFriend {
+  border-radius: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 15px;
+  box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.13);
+}
+
+.blockFriend button {
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.card .about {
+  padding: 10px 20px;
+  height: 150px;
+	overflow: hidden;
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient(to bottom, #000, #000, #fff);
+  text-align: justify;
+}
+
+.card-img {
+  background: url('https://img.freepik.com/free-vector/abstract-violet-pixel-rain-background_23-2148362568.jpg?size=626&ext=jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 130px;
+  border-radius: 5px 5px 0 0;
+}
+.card-img h3{
+  float: right;
+  padding: 10px;
+  color: #fff;
+}
+.card-img h2 {
+  margin: 0;
+  padding: 15px 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.card-share {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card-share button:hover{
+  background-color: #A0DAA9;
+}
+.card-share button {
+  padding: 15px 25px;
+  min-width: 45%;
+  margin: 5px;
+}
+
+.round {
+  width: 100%;
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

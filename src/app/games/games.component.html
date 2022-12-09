@@ -1,0 +1,43 @@
+<div class="block">
+    <div class="">
+        <h3>Tasks</h3>
+        <form [formGroup]="gamesForm">
+            <p>Search Tasks</p>
+            <input class="searchInput" type="text" placeholder="Search Tasks" formControlName="searchGames">
+            <button class="searchButton" type="button" (click)=addFilter()>Search</button>
+        </form>
+    </div>
+    <div>
+        <h3>Featured Tasks</h3>
+        <div class="blockGames">
+            <div class="cards">
+                <div class="card" *ngFor="let task of tasks">
+                    <div class="card-img">
+                        <h2>{{task.title}}</h2>
+                        <h3 class="card-img-money">{{task.level}}</h3>
+                    </div>
+                    <p class="about" [innerHTML]="task.description"></p>
+                    <div class="card-share">
+                        <button type="button" (click)=addTask(task.id)>Add to Library</button>
+                    </div>
+                </div>
+            </div>
+             <div>
+                <form [formGroup]="gamesForm">
+                    <p>Filter by difficulty</p>
+                    <input type="range" id="range" formControlName="range" min="1" max={{max}} step="1" value="3"
+                        (change)=addFilter()>
+                    <p>Filter by tag</p>
+                    <input type="checkbox" id="operators" name="operators" formControlName="operators" (change)=addFilter()>
+                    <label for="operators">operators</label><br>
+                    <input type="checkbox" id="array" name="array" checked formControlName="array"
+                        (change)=addFilter()>
+                    <label for="array">array</label><br>
+                    <input type="checkbox" id="object" name="object" checked formControlName="object"
+                        (change)=addFilter()>
+                    <label for="object">object</label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

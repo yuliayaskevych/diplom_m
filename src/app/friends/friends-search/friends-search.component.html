@@ -1,0 +1,7 @@
+<div class="profile">
+    <h3>Search Friends: {{search}}</h3>
+    <div class="blockFriend" *ngFor="let user of findUsers">
+        <p>{{user}}</p>
+        <button type="button" (click)=addFriend(user)>Add friend</button>
+    </div>
+</div>

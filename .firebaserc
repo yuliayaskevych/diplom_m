@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "media-54777": {
+      "hosting": {
+        "steamClone": [
+          "media-54777"
+        ]
+      }
+    }
+  }
+}

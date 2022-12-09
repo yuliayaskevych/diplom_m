@@ -1,0 +1,4 @@
+.blockGames {
+  display: flex;
+  flex-direction: row;
+}

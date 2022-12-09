@@ -1,0 +1,9 @@
+<div *ngIf="friends" class="usersFriends">
+    <h3>My Friends</h3>
+    <ng-container *ngIf="friends">
+        <div class="blockFriend" *ngFor="let friend of friends">
+            <p>{{friend.username}}</p>
+            <button type="button" (click)=removeFriend(friend.id)>Remove friend</button>
+        </div>
+    </ng-container>
+</div>

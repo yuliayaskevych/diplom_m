@@ -1,0 +1,11 @@
+<div class="block">
+    <div class="searchFriends">
+        <h3>Friends</h3>
+        <form [formGroup]="searchForm" (submit)="submit()">
+            <p>Search Friends</p>
+            <input class="searchInput" type="text" placeholder="Search Friends" formControlName="searchfriends">
+                <button class="searchButton" type="submit">Search</button>
+        </form>
+    </div>    
+    <router-outlet></router-outlet>
+</div>

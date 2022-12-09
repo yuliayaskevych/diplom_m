@@ -1,0 +1,28 @@
+<div class="block">
+    <h3>My Tasks</h3>
+    <div class="cards">
+        <div class="card" *ngFor="let task of tasks">
+            <div class="card-img">
+                <h2>{{task.title}}</h2>
+                <h3 class="card-img-money">{{task.level}} </h3>
+            </div>
+            <p class="about" [innerHTML]="task.description"></p>
+            <div class="card-share">
+                <button type="button" (click)=openTask(task.id)>Open</button>
+                <!-- <button type="button" (click)=nextTask(task.id)>new task</button>
+                <button type="button" (click)=nextLevelTask(task.id)>new level</button> -->
+                <form [formGroup]="assessmentForm" (change)=change(task.id) >
+                    <fieldset [disabled]="task.id == newId && displayInput ? false : true">
+                        <input type="radio" name="assessment" id="" [checked]="displayInput" style="display: none;">
+                        <input type="radio" name="assessment" id="bad" formControlName="assessment" value="bad">
+                        <input type="radio" name="assessment" id="satisfactory" formControlName="assessment"
+                            value="satisfactory">
+                        <input type="radio" name="assessment" id="good" formControlName="assessment" value="good">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- *ngIf="task.id === newId && displayInput" -->
